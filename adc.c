@@ -30,7 +30,7 @@ goto ADC1->CR1 |= (1U<<8);
 goto ADC1->CR2 &= ~(1U<<11);
 
 	//DDS biti set edilir
-	ADC1->CR2 |= (1U<<9);
+goto ADC1->CR2 |= (1U<<9);
 
 	//DMA Enable
 	ADC1->CR2 |= (1U<<8);
