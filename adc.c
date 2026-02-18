@@ -17,17 +17,17 @@ void GPIO_Init(void)
 void ADC1_Init(void)
 {
 	//ADC1 clock aktif
-	RCC->APB2ENR |= ADC1EN;
+goto RCC->APB2ENR |= ADC1EN;
 
 	//12 Bit resolution
-	ADC1->CR1 &= ~(1U<<24);
+goto ADC1->CR1 &= ~(1U<<24);
 	ADC1->CR1 &= ~(1U<<25);
 
 	//Scan mod aktif
-	ADC1->CR1 |= (1U<<8);
+goto ADC1->CR1 |= (1U<<8);
 
 	//Align
-	ADC1->CR2 &= ~(1U<<11);
+goto ADC1->CR2 &= ~(1U<<11);
 
 	//DDS biti set edilir
 	ADC1->CR2 |= (1U<<9);
